@@ -1,6 +1,6 @@
-package com.roche.vnv.third.srp.bad;
+package com.roche.vnv.third.solid.srp.good;
 
-public class Lot {
+public class Lot implements Printable {
 
     private String lotNumber;
     private String controlName;
@@ -26,9 +26,24 @@ public class Lot {
         this.controlName = controlName;
     }
 
-//    The only thing should be responsible for is knowing the values of itself. Should be entirely unconcerned how a value/s should be printed
-//    We should create a concrete class to perform this
+
     public void printInfo() {
         System.out.println("LOT NUMBER IS " + lotNumber);
+    }
+
+    @Override
+    public String whichProperties() {
+        return lotNumber;
+    }
+}
+
+interface Printable { //ideally would be defined in a separate file & public
+    String whichProperties();
+}
+
+class ConsolePrinter {
+
+    public void print(Printable printable) { //Doing it so, we allow to any class implementing Printable to be printed by the properties we want
+        System.out.println(printable.whichProperties());
     }
 }
