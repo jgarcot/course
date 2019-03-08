@@ -31,7 +31,7 @@ public class Application {
             // save demo users
             userRepository.save(new User(0, "Bauer", WELCOME_MESSAGE));
             userRepository.save(new User(1, "O'Brian", WELCOME_MESSAGE));
-            userRepository.save(new User(2, "Bauer", WELCOME_MESSAGE));
+            userRepository.save(new User(2, "Javi", WELCOME_MESSAGE));
             userRepository.save(new User(3, "Palmer", WELCOME_MESSAGE));
             userRepository.save(new User(4, "Dessler", WELCOME_MESSAGE));
 

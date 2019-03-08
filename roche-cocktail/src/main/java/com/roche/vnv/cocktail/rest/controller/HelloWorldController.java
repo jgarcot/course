@@ -27,6 +27,6 @@ public class HelloWorldController {  //TODO: Discuss class naming - is this corr
 
         return foundUser
                 .map(user -> new User(user.getId(), user.getName(), "Welcome back!"))
-                .orElse(new User(counter.decrementAndGet(), name, "Who are you? " + name));
+                .orElse(new User(counter.decrementAndGet(), name, "Who are you " + name + "?"));
     }
 }

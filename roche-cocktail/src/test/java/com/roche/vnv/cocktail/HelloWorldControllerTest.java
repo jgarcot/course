@@ -39,7 +39,7 @@ public class HelloWorldControllerTest {
          * Follow A-A-A (Arrange-Act-Assert)
          */
         final String name = "a-not-existing-name";
-        final User unknownUser = new User(-1, name, "Who are you? " + name);
+        final User unknownUser = new User(-1, name, "Who are you " + name + "?");
 
         when(userJpaRepository.findByName(anyString())).thenReturn(Optional.empty()); //TODO: Discuss anyString() - Why should we avoid anyBlaBla() methods?
 
